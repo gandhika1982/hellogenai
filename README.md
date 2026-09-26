@@ -15,3 +15,10 @@ From this directory, run:
 ```bash
 python main.py
 ```
+
+## Project Status Reports
+
+- [Status report template](reports/template.md)
+- [Instructions for filling out a report](reports/instructions.md)
+- [Filled-in example](reports/example.md)
+- [Project TODO and session handoff](TODO.md)
