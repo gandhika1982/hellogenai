@@ -1,7 +1,9 @@
 # Task Analysis: Jira Sprint Progress Dashboard
 
 **Inputs reviewed:** [`constitution.md`](./constitution.md), [`specification.md`](./specification.md), [`clarify.md`](./clarify.md), [`plan.md`](./plan.md), and [`tasks.md`](./tasks.md).
-**Scope:** Complexity, implementation risks, dependency order, and cross-document gaps. No implementation task is started by this analysis.
+**Scope:** Historical complexity, implementation risks, dependency order, and cross-document gaps for the original full-stack task list. Implementation has since begun; the current mock-data prototype tasks are listed in [`tasks.md`](./tasks.md).
+
+> **Roadmap update:** The full-stack, 19-task assessment below is retained as historical analysis. The active prototype roadmap is now the four-task mock-data plan in [`plan.md`](./plan.md) and [`tasks.md`](./tasks.md); backend/API/database work beyond the already completed scaffold is deferred.
 
 ## Executive summary
 
@@ -84,9 +86,8 @@ These open details do not prevent an isolated BE-01 package scaffold if that tas
 
 ## Task 1 implementation gate
 
-**Task 1:** BE-01 — Initializing the backend package.
-**Proposed bounded scope:** Add only `backend/package.json`, its lockfile, strict `tsconfig.json`, and a minimal `src/index.ts` placeholder that compiles. Pin Node/npm expectations and the direct Express/TypeScript type dependencies specified by the constitution. Add reproducible `build` and `typecheck` scripts. Do not start an Express listener, add routes/middleware, configure PostgreSQL, alter Docker Compose, or edit unrelated files; those belong to later tasks.
+**Historical task 1:** BE-01 — Initializing the backend package. This task was implemented and committed as `42cacc4`.
 
-**Risk to address before implementation:** The existing environment currently has nvm-windows managing Node 24.19.0. Confirm a fresh PowerShell resolves Node/npm through nvm before generating a lockfile, and verify that package installation works under that runtime.
+BE-02 was subsequently approved, implemented, and committed as `37e2325`; its health and structured-404 responses were verified over HTTP.
 
-**Approval required:** This is a proposed scope only. Do not create or modify implementation files until the user approves this exact scope or requests an adjustment.
+The next active prototype task is MVP-01 in [`tasks.md`](./tasks.md). The old full-stack task list is superseded for prototype execution.
