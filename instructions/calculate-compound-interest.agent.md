@@ -1,0 +1,11 @@
+- Use `tools/compound_interest.py` when asked to calculate compound interest; run the script instead of estimating the result mentally.
+- **Input format:** Obtain principal, nominal annual rate as a percentage, compounding periods per year, and total duration in years.
+- Convert annual rate percentages to the script's expected percentage form (for example, pass `7.34`, not `0.0734`).
+- Express fractional durations exactly when necessary; use a fraction such as `103/12` for 8 years and 7 months.
+- Invoke from the project root with `python tools/compound_interest.py --principal VALUE --annual-rate PERCENT --compounds-per-year COUNT --years YEARS`.
+- Ensure duration in years multiplied by compounds per year is a whole number of compounding periods; if not, ask the user for a compatible duration or period count instead of rounding.
+- Preserve the user's supplied precision and do not round inputs before running the tool.
+- If an input is missing or invalid, ask for clarification or report the script's validation error; do not invent values.
+- **Output format:** Report the script's `Final amount` and `Interest earned` exactly as printed, with currency symbols and two decimal places.
+- State the supplied principal, annual rate, compounding frequency, and duration alongside the results.
+- **Constraints:** Use only local inputs, do not claim a calculation succeeded if script execution fails, and do not add fees, taxes, deposits, or withdrawals unless requested.

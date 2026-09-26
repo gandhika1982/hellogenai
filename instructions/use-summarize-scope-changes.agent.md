@@ -1,0 +1,7 @@
+- Use `tools/summarize_scope_changes.py` when asked to total added and removed sprint scope or list their point impacts.
+- **Input format:** Provide a JSON array of change objects, each with a non-empty `issue_key`, `direction` (`added` or `removed`), and `story_points` (non-negative number or `null`); `changed_at` is optional.
+- Invoke from the project root with `python tools/summarize_scope_changes.py --changes-json '<JSON array>'`; in PowerShell, quote the JSON argument with single quotes.
+- Run the script and use its JSON result; do not calculate or guess point totals manually.
+- Report added and removed point totals separately, counts of changes, counts of unknown impacts, and net known change. Do not treat an unknown impact as zero in prose.
+- **Output format:** Return a concise Markdown summary with separate added/removed totals, unknown-impact counts, net known change, and each affected issue with direction and point value when known.
+- **Constraints:** The tool summarizes historical changes only; never add removed issues back into current-scope totals. Do not invent missing keys, directions, points, or dates; surface validation errors instead of claiming success.

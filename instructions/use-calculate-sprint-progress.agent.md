@@ -1,0 +1,8 @@
+- Use `tools/calculate_sprint_progress.py` when asked to calculate sprint story-point progress, weekday progress, or health from issue data.
+- **Input format:** Provide sprint start/end dates and as-of date as `YYYY-MM-DD`, plus a JSON array where every issue has `key`, `status_category`, `story_points` (non-negative number or `null`), and `is_subtask` (`true`/`false`).
+- Invoke from the project root with `python tools/calculate_sprint_progress.py --sprint-start YYYY-MM-DD --sprint-end YYYY-MM-DD --as-of YYYY-MM-DD --issues-json '<JSON array>'`; in PowerShell, quote the JSON argument with single quotes.
+- Use current-scope issues only; do not include removed issues. Use Jira's status category value `Done` for completion, not a status display name.
+- Interpret sprint weekdays as inclusive, elapsed weekdays as sprint weekdays on or before the as-of date, and remaining weekdays as those after the as-of date. Weekends are excluded; holidays are not.
+- Read the script's JSON output for total/completed/remaining points, unestimated issue count, actual/ideal progress, gap, and health.
+- **Output format:** Present sprint dates, working days elapsed/remaining, point totals, unestimated issue count, actual versus ideal progress and gap, health, and the script's date convention in concise Markdown.
+- **Constraints:** Do not infer missing estimates, count sub-tasks, or invent dates/issues. If input validation fails or the script exits unsuccessfully, report the error and do not present a successful calculation.
