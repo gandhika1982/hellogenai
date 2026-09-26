@@ -1,0 +1,20 @@
+services:
+  frontend:
+    image: node:24-alpine
+    profiles:
+      - scaffold
+    working_dir: /workspace
+    volumes:
+      - ./frontend:/workspace
+    # TODO: Add the frontend start command and port after app setup.
+
+  backend:
+    image: node:24-alpine
+    profiles:
+      - scaffold
+    working_dir: /workspace
+    volumes:
+      - ./backend:/workspace
+    # TODO: Add the backend start command and port after app setup.
+
+# The initial MVP uses mock data and does not require a database.
