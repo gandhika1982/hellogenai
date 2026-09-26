@@ -1,10 +1,13 @@
-- **Input format:** Provide confirmed Jira deployment (Cloud or Data Center/server), project/sprint selection, authentication and permission model, refresh behavior, field mappings, normalized domain types/provider interface, sample payloads, and test command.
+- **Input format:** State whether the task is a dry run or implementation. Provide confirmed Jira deployment (Cloud or Data Center/server), project/sprint selection, authentication and permission model, refresh behavior, field mappings, normalized domain types/provider interface, sample payloads, relevant repository paths, and test command.
 - Check that deployment, authentication, access, and required field mappings are confirmed before implementing an adapter.
 - If any integration decision or required payload is missing, stop before adding API code and return a concise decision/request list.
+- For dry runs, do not edit source files or contact Jira; evaluate the supplied configuration and payloads only.
+- Before implementation, confirm the provider interface and application scaffold exist in the repository; otherwise report the missing prerequisite and do not invent a stack or interface.
 - Map confirmed Jira responses into existing normalized domain types inside the provider adapter; keep Jira-specific fields out of dashboard components and domain calculations.
 - Keep credentials and tokens out of browser code; follow the approved secure server-side authentication path where needed.
+- Do not call Jira or another external service unless the user explicitly requests it and authorizes the target environment.
 - Surface loading, empty, permission, expired-authentication, rate-limit, network, and API errors explicitly without success-shaped fallbacks or stale-data claims.
 - Add focused adapter tests for field mapping, Done category, Flagged field, sub-tasks, estimates, sprint membership, and expected error responses.
 - Run the adapter tests and available type-check/lint commands; report any unavailable environment or credentials as a blocker.
-- **Output format:** Report confirmed integration assumptions, field-to-domain mapping, changed files, tests and results, and unresolved decisions.
+- **Output format:** Use these Markdown sections in this order for every run: `Outcome`, `Confirmed assumptions`, `Field-to-domain mapping`, `Changes made`, `Tests and results`, `Unresolved decisions`. Use `None` or `Not applicable — [reason]` when a section has no entries. For blocked work, state the missing decisions under `Unresolved decisions`; for dry runs, explicitly state that no files or external services were changed or contacted.
 - **Constraints:** Never invent Jira configuration, expose secrets, call production APIs without authorization, or change the provider interface without documenting the impact.
