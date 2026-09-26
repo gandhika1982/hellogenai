@@ -7,7 +7,7 @@
 
 ### MVP-01 — Creating the runnable frontend shell
 
-- **Description:** Initialize the separate React 18.3.1, TypeScript 5.7.3, and Vite 5.4.14 frontend package and a single dashboard page shell.
+- **Description:** Initialize the separate React 18.3.1, TypeScript 5.7.3, and Vite 6.4.3 frontend package and a single dashboard page shell.
 - **Acceptance criteria:**
   - `frontend/` has its own pinned `package.json`, lockfile, TypeScript configuration, and Vite entry point.
   - Development and production-build scripts work from `frontend/`.

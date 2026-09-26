@@ -26,7 +26,7 @@ The following versions define the planned stack for the prototype. They are arch
 | Frontend package manager | npm | 11.17.0 |
 | UI | React | 18.3.1 |
 | UI language | TypeScript | 5.7.3 |
-| Frontend tooling | Vite | 5.4.14 |
+| Frontend tooling | Vite | 6.4.3 |
 | Backend runtime | Node.js | 24.19.0 |
 | Backend framework | Express | 5.1.0 |
 | Backend language | TypeScript | 5.7.3 |

@@ -75,6 +75,22 @@ a:focus-visible {
   font-weight: 600;
 }
 
+.view-select {
+  max-width: 190px;
+  padding: 8px 10px;
+  border: 1px solid #dce2ef;
+  border-radius: 8px;
+  color: #35415a;
+  background: #fff;
+  font: inherit;
+  font-size: 12px;
+}
+
+.view-select:focus-visible {
+  outline: 3px solid #4361ee;
+  outline-offset: 3px;
+}
+
 .content {
   max-width: 1120px;
   margin: 0 auto;
@@ -92,7 +108,7 @@ a:focus-visible {
 .eyebrow,
 .card-label {
   margin: 0;
-  color: #77839c;
+  color: #596781;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -125,7 +141,7 @@ h1 {
 
 .muted {
   margin: 0;
-  color: #7c879d;
+  color: #596781;
   font-size: 14px;
 }
 
@@ -149,6 +165,18 @@ h1 {
 
 .health-badge span {
   font-size: 9px;
+}
+
+.health-badge.at-risk {
+  border-color: #f3d7ad;
+  color: #8a5615;
+  background: #fff8eb;
+}
+
+.health-badge.insufficient {
+  border-color: #d9deeb;
+  color: #53617a;
+  background: #f5f7fb;
 }
 
 .summary-grid {
@@ -216,7 +244,7 @@ h1 {
   justify-content: space-between;
   gap: 10px;
   margin-top: 12px;
-  color: #8490a5;
+  color: #596781;
   font-size: 10px;
 }
 
@@ -235,7 +263,7 @@ h1 {
 }
 
 .metric-value span {
-  color: #7c879d;
+  color: #596781;
   font-family: "DM Sans", "Segoe UI", sans-serif;
   font-size: 13px;
   font-weight: 500;
@@ -244,7 +272,7 @@ h1 {
 
 .metric-note {
   margin: 0;
-  color: #8792a5;
+  color: #596781;
   font-size: 11px;
 }
 
@@ -317,7 +345,7 @@ h2 {
   flex: 0 0 auto;
   place-items: center;
   border-radius: 7px;
-  color: #bd5146;
+  color: #a3443b;
   background: #fff1ef;
   font-size: 13px;
   font-weight: 700;
@@ -345,8 +373,14 @@ h2 {
   white-space: nowrap;
 }
 
+.issue-meta,
+.change-meta {
+  color: #596781;
+  font-size: 10px;
+}
+
 .assignee {
-  color: #7d889e;
+  color: #596781;
   font-size: 10px;
   white-space: nowrap;
 }
@@ -354,12 +388,23 @@ h2 {
 .change-row {
   min-height: 48px;
   display: grid;
-  grid-template-columns: 12px 1fr 1fr auto;
+  grid-template-columns: 12px minmax(0, 1fr) auto;
   align-items: center;
   gap: 9px;
   border-top: 1px solid #f0f2f6;
   color: #59657b;
   font-size: 11px;
+}
+
+.change-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.change-copy > span:first-child {
+  overflow-wrap: anywhere;
 }
 
 .change-dot {
@@ -388,8 +433,29 @@ h2 {
 
 .scope-note {
   margin: 13px 0 0;
-  color: #8993a5;
+  color: #596781;
   font-size: 10px;
+}
+
+.scope-totals {
+  display: flex;
+  justify-content: space-between;
+  margin: -5px 0 11px;
+  color: #59657b;
+  font-size: 11px;
+}
+
+.scope-totals strong {
+  margin-left: 4px;
+  color: #36445f;
+}
+
+.empty-state {
+  margin: 0;
+  padding: 20px 0;
+  border-top: 1px solid #f0f2f6;
+  color: #69758b;
+  font-size: 13px;
 }
 
 .footer-note {
@@ -397,7 +463,7 @@ h2 {
   align-items: center;
   gap: 8px;
   margin-top: 22px;
-  color: #9099aa;
+  color: #596781;
   font-size: 11px;
 }
 
@@ -416,8 +482,16 @@ h2 {
 
 @media (max-width: 620px) {
   .topbar {
-    height: 62px;
-    padding: 0 18px;
+    min-height: 62px;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px 18px;
+  }
+
+  .view-select {
+    width: 100%;
+    max-width: none;
   }
 
   .content {

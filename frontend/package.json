@@ -11,7 +11,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "node --test src/domain.test.ts"
   },
   "dependencies": {
     "react": "18.3.1",
@@ -20,6 +21,7 @@
   "devDependencies": {
     "@types/react": "18.3.18",
     "@types/react-dom": "18.3.5",
+    "@types/node": "24.3.0",
     "@vitejs/plugin-react": "4.3.4",
     "typescript": "5.7.3",
     "vite": "6.4.3"

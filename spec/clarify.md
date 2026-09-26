@@ -18,7 +18,7 @@
 ### 3. What exact versions and package boundaries should implementation use?
 
 - **Gap:** Architecture targets need to be distinguishable from already installed dependencies, and it is unclear whether the two applications share a package manifest.
-- **Resolution:** Use the version targets in [`constitution.md`](./constitution.md): Node.js 24.19.0, npm 11.17.0, React 18.3.1, TypeScript 5.7.3, Vite 5.4.14, Express 5.1.0, and PostgreSQL 15. Keep frontend and backend package manifests separate. Pin direct dependencies and commit their lockfiles when the applications are initialized. Do not add a root npm-workspaces setup for the prototype unless a later approved change requires it.
+- **Resolution:** Use the version targets in [`constitution.md`](./constitution.md): Node.js 24.19.0, npm 11.17.0, React 18.3.1, TypeScript 5.7.3, Vite 6.4.3, Express 5.1.0, and PostgreSQL 15. Keep frontend and backend package manifests separate. Pin direct dependencies and commit their lockfiles when the applications are initialized. Do not add a root npm-workspaces setup for the prototype unless a later approved change requires it.
 
 ## User experience and product behavior
 

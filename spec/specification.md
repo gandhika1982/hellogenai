@@ -142,7 +142,7 @@ The schema is a normalized storage proposal for the optional API/database increm
 
 ## 7. Architecture and implementation boundaries
 
-- **Frontend:** React 18.3.1 + TypeScript 5.7.3 + Vite 5.4.14. Dashboard components render normalized view data and do not contain sprint-calculation rules.
+- **Frontend:** React 18.3.1 + TypeScript 5.7.3 + Vite 6.4.3. Dashboard components render normalized view data and do not contain sprint-calculation rules.
 - **Domain:** Pure, independently tested calculations for issue inclusion, point totals, weekday progress, health, blockers, and scope-change summaries.
 - **Mock provider:** Deterministic synthetic data is the MVP source and must not require network, Docker, API, or credentials.
 - **Future backend:** Node.js 24.19.0 + Express 5.1.0 + TypeScript 5.7.3, with route/controller/service/repository boundaries and runtime input validation.
