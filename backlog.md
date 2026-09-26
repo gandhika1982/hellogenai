@@ -25,6 +25,12 @@ Complete tasks in phase order. Jira-specific implementation tasks remain uncheck
 - [ ] [custom skill] Add deterministic, synthetic mock data for one small team and active sprint, including varied issue statuses, estimates, assignees, flagged issues, sub-tasks, and scope changes. — GitHub issue [#7](https://github.com/gandhika1982/hellogenai/issues/7)
 - [ ] [custom skill] Add shared CSS design tokens and baseline responsive page styles for a clean Jira-inspired interface. — GitHub issue [#8](https://github.com/gandhika1982/hellogenai/issues/8)
 
+### Module 19 — GitHub coding-agent delegation candidates
+
+- After the application scaffold in issue [#3](https://github.com/gandhika1982/hellogenai/issues/3) is in place, consider delegating the bounded setup/layout/model/mock-data tasks in issues [#4](https://github.com/gandhika1982/hellogenai/issues/4), [#5](https://github.com/gandhika1982/hellogenai/issues/5), [#6](https://github.com/gandhika1982/hellogenai/issues/6), and [#7](https://github.com/gandhika1982/hellogenai/issues/7) to the GitHub coding agent. Keep each task in a separate branch/PR and review dependency choices, type coverage, deterministic fixtures, and tests before merging.
+- Delegate issue [#2](https://github.com/gandhika1982/hellogenai/issues/2) only after issue #6 establishes the normalized domain types; require the provider interface to avoid Jira-specific payloads and include tests for mock-provider behavior.
+- Once the Phase 2 calculation requirements are expressed as individual issues, pure scope, weekday-progress, health, and scope-change calculations are also good isolated coding-agent candidates when provided with the documented edge cases and required tests. Keep Jira deployment/authentication decisions and any credential-handling design with the project owner; require human review for all generated changes.
+
 ## Phase 2 — Core Features
 
 ### Sprint summary and health
