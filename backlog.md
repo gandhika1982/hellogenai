@@ -17,13 +17,13 @@ Complete tasks in phase order. Jira-specific implementation tasks remain uncheck
 
 ## Phase 1 — Setup
 
-- [ ] [custom skill] Scaffold a React and TypeScript application with Vite in the project, keeping the existing calculator files intact.
-- [ ] [custom skill] Configure Vitest as the unit/component test runner, with React Testing Library, `@testing-library/user-event`, and `@testing-library/jest-dom` for accessible component tests; add development, test, lint, type-check, and production-build scripts and document their invocation in the project README.
-- [ ] [custom skill] Establish a source layout for dashboard presentation, domain models/calculations, data providers, styles, and tests.
-- [ ] [custom skill] Define TypeScript domain types for team, sprint, issue, status category, scope change, and sprint dashboard data.
-- [ ] [custom skill] Define a typed sprint data-provider interface that returns normalized domain data without exposing provider-specific payloads to the UI.
-- [ ] [custom skill] Add deterministic, synthetic mock data for one small team and active sprint, including varied issue statuses, estimates, assignees, flagged issues, sub-tasks, and scope changes.
-- [ ] [custom skill] Add shared CSS design tokens and baseline responsive page styles for a clean Jira-inspired interface.
+- [ ] [custom skill] Scaffold a React and TypeScript application with Vite in the project, keeping the existing calculator files intact. — GitHub issue [#3](https://github.com/gandhika1982/hellogenai/issues/3)
+- [ ] [custom skill] Configure Vitest as the unit/component test runner, with React Testing Library, `@testing-library/user-event`, and `@testing-library/jest-dom` for accessible component tests; add development, test, lint, type-check, and production-build scripts and document their invocation in the project README. — GitHub issue [#4](https://github.com/gandhika1982/hellogenai/issues/4)
+- [ ] [custom skill] Establish a source layout for dashboard presentation, domain models/calculations, data providers, styles, and tests. — GitHub issue [#5](https://github.com/gandhika1982/hellogenai/issues/5)
+- [ ] [custom skill] Define TypeScript domain types for team, sprint, issue, status category, scope change, and sprint dashboard data. — GitHub issue [#6](https://github.com/gandhika1982/hellogenai/issues/6)
+- [ ] [custom skill] Define a typed sprint data-provider interface that returns normalized domain data without exposing provider-specific payloads to the UI. — GitHub issue [#2](https://github.com/gandhika1982/hellogenai/issues/2)
+- [ ] [custom skill] Add deterministic, synthetic mock data for one small team and active sprint, including varied issue statuses, estimates, assignees, flagged issues, sub-tasks, and scope changes. — GitHub issue [#7](https://github.com/gandhika1982/hellogenai/issues/7)
+- [ ] [custom skill] Add shared CSS design tokens and baseline responsive page styles for a clean Jira-inspired interface. — GitHub issue [#8](https://github.com/gandhika1982/hellogenai/issues/8)
 
 ## Phase 2 — Core Features
 
