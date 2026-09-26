@@ -1,0 +1,11 @@
+- **Input format:** Provide sprint start/end dates, an as-of date, the date-boundary convention, and a list of current-scope issues with key, status category, story points (`null` if unestimated), and sub-task flag; optionally provide scope-change records with direction and point impact.
+- Validate required fields and the date convention; ask for missing or ambiguous inputs instead of inventing values.
+- Exclude sub-tasks from issue counts and point totals.
+- Count an issue as complete only when its status category is `Done`; do not infer completion from the status name.
+- Exclude unestimated issues from point totals and report their count separately.
+- Calculate total, completed, and remaining points from current-scope issues; calculate actual progress against current-scope estimated points.
+- Calculate ideal progress using Monday–Friday working days and the supplied boundary convention; define gap as actual minus ideal, and mark At risk when gap is at most -10 percentage points.
+- If current-scope estimated points total zero, report insufficient estimate data instead of percentages or a health status.
+- Summarize added and removed scope-change points separately when supplied; never add removed issues to current-scope totals.
+- **Output format:** Return a concise Markdown report with sprint dates, working days elapsed/remaining, total/completed/remaining points, unestimated issue count, actual/ideal progress and gap, health status, and scope-change summary when available.
+- **Constraints:** Show assumptions explicitly; do not invent Jira data, issue estimates, dates, holidays, or missing scope-change impacts.

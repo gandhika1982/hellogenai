@@ -1,0 +1,10 @@
+- **Input format:** Provide the backlog task, acceptance criteria, existing domain types/provider, relevant component paths, and available test command.
+- Inspect the existing application structure and nearby components before editing.
+- Confirm the requested feature fits the installed framework and current data-provider interface; if setup is absent, report the prerequisite instead of choosing a stack or adding dependencies.
+- Implement the smallest complete feature using existing patterns and shared styles.
+- Include populated, empty, missing-data, and error states required by the acceptance criteria.
+- Target WCAG 2.2 AA; make controls keyboard-operable, provide visible focus and semantic names, verify contrast, and communicate status without relying on color.
+- Add or update focused component tests for expected behavior and relevant empty/error states.
+- Run the narrowest applicable tests, type-check, and lint; report failures without claiming success.
+- **Output format:** Summarize changed files, implemented behavior, accessibility states, validation commands/results, and unresolved blockers.
+- **Constraints:** Do not fabricate data, weaken acceptance criteria, add unrelated features, or silently swallow provider errors; ask before making material UX or architecture decisions.
